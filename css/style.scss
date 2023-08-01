@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+html {
+  font-size: 15px;
+  scroll-behavior: smooth;
+}
+
+// variables //
+$orange: #fea116;
+$white: #fff;
+$light-white: #e7eef6;
+$dark: #0f172b;
+$grey: #6f6f70;
+
+// Mixins 
+@mixin flex {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@mixin center-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+@mixin btn-style {
+  background-color: $orange;
+  color: $white;
+  font-size: 1.1rem;
+  padding: 18px 9%;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  border-radius: 2px;
+}
+
+@mixin f-100 {
+  width: 100%;
+}
+
+.headings {
+  width: 100%;
+  @include center-items();
+  flex-direction: column;
+  padding-bottom: 25px;
+
+  h5 {
+    font-size: 1.5rem;
+    font-family: "Pacifico", cursive;
+    color: $orange;
+    font-weight: 100;
+    text-transform: capitalize;
+  }
+
+  h3 {
+    font-size: 3rem;
+  }
+}
+
+.top-banners{
+    height: 50vh;
+    
+    .center-text{
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       position: relative;
+       top: 90px;
+     
+
+        h2{
+            font-size: 4.2rem;
+            color: $white;  
+            font-weight: 800; 
+            margin-bottom: 15px;   
+        
+          }
+      
+         ul{    
+           width: 100%;
+           margin: 0 auto;
+           display: flex;
+           flex-direction: row;
+           justify-content: center;
+           
+           
+           
+          
+      
+      
+           li{
+             list-style: none;
+             margin: 0 5px;
+      
+             a{
+               color: $orange;
+               text-decoration: none;
+               font-size: 1rem;
+               text-transform: uppercase;
+      
+               &:hover{
+               color: $white ;
+               }
+      
+               .breadcrumb{
+                 color: var(--grey);
+               }
+      
+             }
+      
+             .active{
+               color: $white;
+              
+             }
+           }
+         
+         }
+    }
+    
+      
+}
+
+@import "header";
+
+@import "services";
+
+@import "about";
+
+@import "menu";
+
+@import "contact";
+
+@import "booking";
+
+@import "ourteam";
+
+@import "testimonial";
+
+@import "footer";
+
+@import "media";

@@ -1,0 +1,107 @@
+.booking-section {
+  @include f-100();
+
+  .booking-center {
+    @include inner();
+    @include flex();
+
+    .bookings {
+      width: 50%;
+    }
+
+    .img-section {
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .form-section {
+      background-color: $dark;
+      padding: 40px;
+
+      .heading {
+        width: 100%;
+
+        h1 {
+          color: $orange;
+          font-family: "Pacifico", cursive;
+          font-weight: 400;
+          font-size: 1.4rem;
+        }
+
+        h2 {
+          color: $white;
+          font-size: 2.8rem;
+          padding-bottom: 20px;
+        }
+      }
+
+      form {
+        width: 100%;
+        @include flex();
+
+        .w-50 {
+          width: 48.5%;
+          margin-bottom: 15px;
+        }
+
+        .w-100 {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+
+        .name {
+          input {
+            width: 100%;
+            padding: 15px 10px;
+            font-size: 1rem;
+            outline: none;
+
+            &::placeholder {
+              text-transform: capitalize;
+            }
+          }
+        }
+
+        .date_time {
+          input {
+            width: 100%;
+            padding: 15px 10px;
+            font-size: 1rem;
+            outline: none;
+          }
+        }
+
+        .person {
+          .People {
+            width: 100%;
+            padding: 15px 10px;
+            font-size: 1rem;
+            outline: none;
+          }
+        }
+
+        .massage {
+          textarea {
+            width: 100%;
+            padding: 15px 10px;
+            outline: none;
+
+            &::placeholder {
+              text-transform: capitalize;
+              font-size: 1rem;
+            }
+          }
+        }
+
+        .btn {
+          .b-a-t {
+            @include btn-style();
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

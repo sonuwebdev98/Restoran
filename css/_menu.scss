@@ -1,0 +1,114 @@
+.food-menu {
+  @include f-100();
+
+  .mar-top{
+    margin-top: 50px
+  }
+
+  .foodmenu-center {
+    @include inner();
+    @include flex();
+
+    .menu-category {
+      width: 100%;
+      padding-bottom: 60px;
+
+      
+      @include flex();
+
+      .category-center {
+        width: 38%;
+        margin: 0 auto;
+        @include flex();
+
+        .category {
+          width: 30%;
+          @include flex();
+
+          &:hover {
+            border-bottom: 2px solid $orange;
+          }
+
+          .font {
+            width: 28%;
+            color: $orange;
+            font-size: 2rem;
+          }
+
+          .dt {
+            width: 68%;
+
+            h1 {
+              font-size: 1rem;
+              text-transform: capitalize;
+              color: $grey;
+              font-weight: 400;
+            }
+
+            h3 {
+              font-size: 1.2rem;
+              font-weight: 800;
+              text-transform: capitalize;
+            }
+          }
+        }
+
+        .active {
+          border-bottom: 2px solid $orange;
+        }
+      }
+    }
+
+    .menu {
+      width: 48.5%;
+
+      .menu-1 {
+        width: 100%;
+        @include flex();
+        margin-bottom: 20px;
+
+        .img-box {
+          width: 20%;
+        
+          img {
+            width: 85px;
+          }
+        }
+        .menu-dt {
+          width: 78%;
+        
+          .tp {
+            width: 100%;
+            @include flex();
+            border-bottom: 1px solid $light-white;
+            padding-bottom: 5px;
+
+            h1 {
+              width: 50%;             
+            }
+
+            .price {
+              width: 25%;
+              color: $orange;
+              font-size: 1.5rem;
+              font-weight: 800;
+            }
+          }
+
+          .btm {
+            width: 100%;
+            padding-top: 5px;
+
+            p {
+              font-size: 1rem;
+              font-family: "Heebo", sans-serif;
+              font-weight: 400;
+              font-style: italic;
+              color: $grey;
+            }
+          }
+        }
+      }
+    }
+  }
+}

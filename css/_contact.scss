@@ -1,0 +1,162 @@
+
+.contact-section{
+    @include f-100();
+
+     .contact-center{
+         @include inner();
+         @include flex();
+
+         .heading{
+             width: 100%;
+             @include flex();
+
+             .heading-1{
+                 width: 33%;
+                 margin-bottom: 50px;
+                //  border: 2px solid rebeccapurple;
+                 
+
+                 h1{
+                    color: $orange;
+                    font-family: "Pacifico", cursive;
+                    font-weight: 400;
+                    font-size: 1.3rem;
+                    margin-bottom: 10px;
+                 }
+
+                 h2{
+                     color: $grey;
+                     font-size: 1.1rem;
+                     font-weight: 400;
+
+
+                     .b{
+                         color: $orange;
+                         padding-right: 2%;
+                         font-size:20px;
+                     }
+                 }
+             }
+
+
+         }
+
+         .contact{
+             width: 48.5%;
+            //  border: 1px solid red;
+         }
+
+         .form-section{
+
+            form{
+                width: 100%;
+                @include flex();
+
+
+                .w-50 {
+                    width: 48.5%;
+                    margin-bottom: 15px;
+                  
+                  }
+          
+                  .w-100 {
+                    width: 100%;
+                    margin-bottom: 15px;
+            
+
+                  }
+
+
+                  .name {
+                    input {
+                      width: 100%;
+                      padding: 20px 10px;
+                      font-size: 1rem;
+                      outline: none;
+                      border: 1px solid $light-white;
+                      transition: all .3s ease;
+          
+                      &::placeholder {
+                        text-transform: capitalize;
+                      }
+
+                      &:focus{
+                          outline: 4px solid $orange;
+                          opacity: 0.5;
+
+                      }
+                    }
+                  }
+
+
+                  .subjects{
+
+                    input {
+                        width: 100%;
+                        padding: 15px 10px;
+                        font-size: 1rem;
+                        outline: none;
+                        border: 1px solid $light-white;
+                        transition: all .3s ease;
+            
+                        &::placeholder {
+                          text-transform: capitalize;
+                        }
+
+
+                        &:focus{
+                            outline: 4px solid $orange;
+                            opacity: 0.5;
+  
+                        }
+                      }
+
+                  }
+
+
+                  .massage {
+                    textarea {
+                      width: 100%;
+                      padding: 15px 10px;
+                      outline: none;
+                      border: 1px solid $light-white;
+                      transition: all .3s ease;
+          
+                      &::placeholder {
+                        text-transform: capitalize;
+                        font-size: 1rem;
+                      }
+
+                      &:focus{
+                        outline: 4px solid $orange;
+                        opacity: 0.5;
+
+                    }
+                    }
+                  }
+
+
+                  .btn {
+                    .b-a-t {
+                      @include btn-style();
+                      width: 100%;
+                      transition: 1s;
+
+                      &:hover{
+                          cursor: pointer;
+                         
+                      }
+
+                      &:focus{
+                        outline: 4px solid $orange;
+                        opacity: 0.2;
+                       
+
+                    }
+                    }
+                  }
+            }
+         }
+
+     }
+}

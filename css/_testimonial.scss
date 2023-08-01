@@ -1,0 +1,62 @@
+.testimonial-section {
+  @include f-100();
+
+  .mar-top{
+    margin-top: 50px
+  }
+
+  .testimonial-center {
+    @include inner();
+
+    .custom-changes {
+      .item {
+        border: 1px solid $light-white;
+        padding: 22px;
+
+        .quote {
+          color: $orange;
+          font-size: 2rem;
+          font-weight: 800;
+        }
+
+        p {
+          font-size: 1rem;
+          color: $grey;
+          font-weight: 400;
+          padding: 15px 0;
+        }
+
+        .img-section {
+          width: 100%;
+          @include flex();
+          line-height: 30px;
+
+          .img {
+            width: 20%;
+
+            img {
+              width: 60px;
+              border-radius: 50%;
+            }
+          }
+
+          .text {
+            width: 75%;
+
+            h1 {
+              color: $dark;
+              font-size: 1.4rem;
+            }
+
+            small {
+              font-size: 1rem;
+              color: $grey;
+              text-transform: capitalize;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+  }
+}

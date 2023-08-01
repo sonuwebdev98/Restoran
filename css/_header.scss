@@ -1,0 +1,217 @@
+
+header{
+    background: linear-gradient(rgba(15, 23, 43, 0.9), rgba(15, 23, 43, 0.9)),
+    url(../img/bg-hero.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  padding: 1px;
+
+
+   .navigation{
+       width: 100%;
+       position: fixed;
+       top: 0;
+       z-index: 10;
+       transition: 1s ease;
+
+       nav{
+           @include flex();
+           @include inner();
+           line-height: 40px;
+           margin-top: 20px;  
+           padding: 0px;
+           
+           .logo{
+               width: 20%;
+               color: $orange;
+               display: flex;
+               flex-direction: row;
+               padding: 10px 0;
+
+
+               .knife{
+                   font-size: 2.5rem;
+               }
+
+               h1{
+                   font-size: 2.8rem;
+                   margin-left: 6%;
+                   font-weight: 700;
+               }
+           }
+
+           .menu{
+               width: 58%;
+
+               ul{
+                   display: flex;
+                   justify-content: space-between;
+                   line-height: 40px;
+
+                   li{
+                       list-style: none;
+                       line-height: 40px;
+
+                       &:hover > {
+                           ul{
+                               display: block;
+                           }
+                       }
+
+                       a{
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        font-size: 1rem;
+                        line-height: 60px;
+                        font-weight: 600;
+                        color: $white;
+                        transition: all 0.3s;
+
+                        &:hover {
+                            color: $orange;
+                          }
+
+                       }
+
+                       .active{
+                           color: $orange;
+                       }
+
+
+                       .book {
+                        background-color: $orange;
+                        color: $white;
+                        padding: 8px 1.1rem;
+                        width: 100%;
+          
+                        &:hover {
+                          color: $white;
+                        }
+                      }
+                   }
+
+                   .dropdown {
+                    ul {
+                      display: flex;
+                      flex-direction: column;
+                      position: absolute;
+                      z-index: 100;
+                      background-color: $white;
+                      width: 180px;
+                      display: none;
+        
+                      li {
+                        a {
+                          line-height: 0px;
+                          color: $dark;
+                          font-size: 1.1rem;
+                          text-transform: capitalize;
+                          font-weight: 600;
+                          font-family: "Nunito", sans-serif;
+                          background-color: $white;
+                          width: 180px;
+                          padding: 20px;
+                          display: block;
+        
+                          &:hover {
+                            background-color: $light-white;
+                          }
+                        }
+                      }
+                    }
+                  }
+
+
+
+
+               }
+           }
+
+           .hamburger {
+            display: none;
+            width: 10%;
+            color: $white;
+            font-size: 2.5rem; 
+                   
+          }
+
+
+
+       }
+
+       .dark-nav {
+        min-width: 100%;
+        margin-top: 0;
+        background-color: $dark;
+        max-width: 100%;
+        padding: 0 5%;
+        transition: 1s;
+      }
+   }
+   
+   .banners {
+    @include inner();
+    @include flex();
+    position: relative;
+    top: 150px;
+
+
+    .box {
+      width: 48.5%;
+    }
+
+    .text {
+      @include center-items();
+
+      summary {
+        h1 {
+          font-size: 4.5rem;
+          line-height: 80px;
+          font-weight: 800;
+          color: $white;
+        }
+
+        p {
+          font-size: 1.1rem;
+          line-height: 30px;
+          padding: 10px 0 20px 0;
+          font-family: "Heebo", sans-serif;
+          color: $white;
+        }
+
+        .b-a-t {
+          @include btn-style();
+        }
+      }
+    }
+
+    .round-img {
+      figure {
+       
+        overflow: hidden;
+     
+        img {
+          width: 100%;
+          animation: hero 20s linear infinite ;
+          border-radius: 100%;
+          
+        }
+
+        @keyframes hero {
+          0% {
+            transform: rotate(0deg);
+          }
+
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+      }
+    }
+  }
+
+
+}

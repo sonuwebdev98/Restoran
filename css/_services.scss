@@ -1,0 +1,51 @@
+.service-section {
+  @include f-100();
+
+  .service-center {
+    @include inner();
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+
+    .service-1 {
+      border: 1px solid $light-white;
+      padding: 35px 15px;
+      transition: all ease 0.5s;
+
+      &:hover {
+        background-color: $orange;
+      }
+
+      &:hover .ser-icon {
+        color: $white;
+      }
+
+      &:hover h1 {
+        color: $white;
+      }
+
+      &:hover p {
+        color: $white;
+      }
+
+      .ser-icon {
+        font-size: 45px;
+        color: $orange;
+      }
+
+      h1 {
+        font-size: 1.4rem;
+        font-weight: 800;
+        color: var(--dark);
+        padding: 15px 0;
+      }
+
+      p {
+        font-size: 1.1rem;
+        color: var(--grey);
+        font-weight: 400;
+        font-family: "Heebo", sans-serif;
+      }
+    }
+  }
+}
